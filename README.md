@@ -1,7 +1,8 @@
 # Yotube_API
 Problem Statment : To make an API to fetch latest videos sorted in reverse chronological order of their publishing date-time from YouTube for a given tag/search query in a paginated response.
 
-(As a guide I've included a video of a working model to this repository.)
+(As a guide I've included a video of a working model to this repository)
+
 A stepwise description to execute  this project :
 
 As stated in the question, I have created an API that would retrieve the most recent videos from YouTube, paginated, and arranged in reverse chronological order of their publishing date-time. Additionally, it will store information about videos, including their ID, publication date, channel ID, title, description, thumbnails, and channel title with proper indexes. Further, I created a Dashobard where  API returns the saved videos and user can search a particular video from  stored videos using their title and description. When a key's quota is used up, it automatically switches to the second key.This project uses EJS, node.js, express.js, and MongoDB as its technology stack.
