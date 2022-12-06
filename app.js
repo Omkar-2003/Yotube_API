@@ -175,13 +175,13 @@ app.post("/", function(req, res) {
           channelTitle: item.snippet.channelTitle
         });
 
-     // newvideo.save();
+     newvideo.save();
 
         ///Some Error Handelling code
         //half of the code is commented because in future you could use this alternative
 
 
-        // newvideo.save();
+         newvideo.save();
 
 
         // Yotubevideo.findOne({videoid: item.id.videoId})
