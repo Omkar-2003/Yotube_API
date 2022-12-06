@@ -175,11 +175,10 @@ app.post("/", function(req, res) {
           channelTitle: item.snippet.channelTitle
         });
 
-     newvideo.save();
+
 
         ///Some Error Handelling code
-        //half of the code is commented because in future you could use this alternative
-
+        //commented code implies alternative for particular block
 
          newvideo.save();
 
