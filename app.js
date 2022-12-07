@@ -122,6 +122,15 @@ app.get("/findresult", function(req, res) {
 
 });
 
+//It will show data of stored videos in JSON form  
+app.get("/apiresult",function(req,res){
+
+  Yotubevideo.find({}, function (err, users) {
+       res.send(users);
+   });
+
+});
+
 
 //Post request for Rendering data depends on User's Search request and Pagentation
 app.post("/", function(req, res) {
