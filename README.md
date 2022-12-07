@@ -20,6 +20,8 @@ Step 5 : You may now search for any term and have the option to select maxvideos
 
 Step 6 : API will fetch latest videos sorted in reverse chronological order of their publishing date-time from YouTube, The results of your search will be saved in a MongoDB database.
 
+Step 7 : A GET API which returns the stored video data in JSON format (http://localhost:5000/apiresult)
+
 Step 7 : Data that has been saved will be accessible through the dashboard which has route {"/dashboard" } at GET request (http://localhost:5000/dashboard)
 
 Step 8 : By using the stored videos' titles and descriptions, you can search them right on this dashboard
