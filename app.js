@@ -104,7 +104,7 @@ app.get("/dashboard", function(req, res) {
       res.render('dashboardresult', {
         EachUSers: databaselist
       });
-      databaselist = [];;
+      databaselist = [];
 
     });
 
@@ -189,7 +189,7 @@ app.post("/", function(req, res) {
         ///Some Error Handelling code
         //commented code implies alternative for particular block
 
-         newvideo.save();
+       
 
 
         // Yotubevideo.findOne({videoid: item.id.videoId})
@@ -201,22 +201,22 @@ app.post("/", function(req, res) {
         //      }
         //      })
 
-
-        Yotubevideo.findOne({
+  Yotubevideo.findOne({
             videoid: item.id.videoId
           })
           .then(resp => {
-
-            if (resp.length != 0) {
-              console.log("data Exists");
+            if (resp != null && resp.length < 1) {
+       console.log("data Exists");
+        
             } else {
-
+      console.log("Data Got Saved to Database");
               newvideo.save();
 
             }
           }).catch(err => {
             console.log(err);
           })
+
 
       });
 
