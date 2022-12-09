@@ -128,6 +128,16 @@ app.get("/apiresult",function(req,res){
   Yotubevideo.find({}, function (err, users) {
        res.send(users);
    });
+  
+     Yotubevideo.find().count(function (err, counts) {
+    
+    if (err){
+      console.log(err);
+    }
+    else{
+    console.log("Count:", counts);
+    }
+});
 
 });
 
