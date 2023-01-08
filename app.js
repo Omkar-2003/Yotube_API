@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-mongoose.connect("mongodb+srv://omkar:OMKAR@cluster0.duiwp6o.mongodb.net/YotubeAPI", {
+mongoose.connect("mongodb+srv://omkar:OMKAR@cluster0.duiwp6o.mongodb.net/"YOUR_CLUSTER_NAME", {
   useNewUrlParser: true
 });
 
@@ -57,7 +57,7 @@ const YotubevideoSchema = mongoose.Schema({
 const Yotubevideo = mongoose.model("Yotubevideo", YotubevideoSchema);
 
 //Initialized Global Variables For computation
-var apiKey = "AIzaSyCi39MlsWy6Dfrn9MbsIap5FbcEmP3QvUc";
+var apiKey = "YOUR_API_KEY";
 var list = [];
 var required_list = [];
 var count = 0;
@@ -157,7 +157,7 @@ app.post("/", function(req, res) {
   count = count + 1;
   const maxResults = 40;
   const searchQuery = req.body.search;
-  // const apiKey = "AIzaSyCi39MlsWy6Dfrn9MbsIap5FbcEmP3QvUc";
+  // const apiKey = "YoUR_API_KEY";
   const url = "https://youtube.googleapis.com/youtube/v3/search?key=" + apiKey + "&type=video&part=snippet&maxResults=" + maxResults + "&q=" + searchQuery + "&order=date";
 
 
@@ -173,7 +173,7 @@ app.post("/", function(req, res) {
 
       //If ApI exceed it's limit it will take second key as a API key
       if (data.length == 0) {
-        apiKey = "AIzaSyA1lgTYxtsXAJDIIr3GX3MsM9bbwd507Nk";
+        apiKey = "YOUR_API_KEY";
         res.render("/");
       }
 
